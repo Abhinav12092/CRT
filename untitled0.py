@@ -118,3 +118,82 @@ for i in range(100, 1000):
     # A prime number has exactly two divisors: 1 and itself
     if count == 2:
         print(f"{i} is a prime number")
+
+
+a="*"
+b=a.isdigit()
+c=a.isalpha()
+d=a.isalnum()
+print(d)
+
+
+
+
+a="JAI SRH"
+b="".join(i for i in a if i in "AEIOU")
+print(b)
+
+
+
+
+
+a="abhinav789456123"
+b=sorted(a)
+print(b)
+
+
+
+ a=input("Enter your pasasword:")
+ up=0
+ sm=0
+ sp=0
+ dg=0
+ if len(a)>7:
+  for i in a:
+    if i.isupper():
+      up=up+1
+    elif i.islower():
+      sm=sm+1
+    elif i.isdigit():
+      dg=dg+1
+    else:
+      sp=sp+1
+  if up>0 and sm>0 and dg>0 and sp>0:
+    print("STRONG")
+  else:
+    print("WEAK")
+else:
+  print("RETYPE")
+
+
+
+
+
+import time
+import sys
+h=3
+m=43
+s=0
+while True:
+  sys.stdout.write("\r{:02d}:{:02d}:{:02d}".format(h, m, s))
+  sys.stdout.flush()
+  time.sleep(1)
+  s=s+1
+  if s==60:
+    s=0
+    m=m+1
+    if m==60:
+      m=0
+      h=h+1
+      if h==24:
+        h=0
+
+
+
+
+
+
+
+
+
+          

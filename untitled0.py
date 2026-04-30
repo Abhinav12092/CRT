@@ -201,6 +201,84 @@ for i in pytz.all_timezones:
 
 
 
+print(ord(""))
+
+
+a=[chr (i)for i in range(65,91) if chr(i) not in "AEIOU"]
+print(a)
+
+
+
+a=6789
+b=[int(i) for i in str(a)]
+print(max(b))
+
+
+
+
+names=["Ram","Raj","Rose","Jack","Pavi"]
+marks=[45,33,90,27,78]
+pos=1
+for i in range(5):
+  if marks[i]>40:
+    print("{}.{} has scored{}%".format(pos,names[i],marks[i]))
+    pos=pos+1
+
+
+
+
+from os import name
+names=["raM","RAJ","rose","JaCk","PaVi"]
+marks=[[30,40,50],[66,77,55],[33,78,90],[87,97,57],[47,38,44]]
+for i in range(5):
+  p=sum(marks[i])//3
+  if p>80:
+    g="S"
+  elif p>40 and p<60:
+    g="B"
+  else:
+    g="A"
+  print("{}.Mr/Mrs{} has scored {}% - {} Grade".format(i+1, names[i], p, g))
+
+
+
+
+
+names=["raM","RAJ","rose","JaCk","PaVi"]
+marks=[45,33,90,27,78]
+res=list(zip(marks,names))
+res1=sorted(res)
+pos=1
+for i in res1:
+  print("Rank {}: {} score is {}".format(pos,i[1],i[0]))
+  pos=pos+1
+
+
+
+
+
+from typing import Collection
+a=int(input("Enter num of teams: "))
+teams=[]
+print("Enter all teams name: ")
+for i in range(a):
+  t=input("Enter team name: ")
+  teams.append(t)
+m=int(input("Enter num of meet btw teams: "))
+
+matches=[]
+for i in range(0,a-1):
+  for j in range(i+1,a):
+    for k in range(m):
+      matches.append((teams[i],teams[j]))
+random.shuffle(matches)
+pos=1
+for i in matches:
+  print("MATCH {} : {} vs {} ".format(pos,i[0],i[1]))
+  pos=pos+1
+
+
+
 
 
 

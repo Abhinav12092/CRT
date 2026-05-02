@@ -280,6 +280,125 @@ for i in matches:
 
 
 
+a=input("Enter cute boy name: ")
+b=input("Enter avg girl name: ")
+a1=list(a)
+b1=list(b)
+for i in range(len(a1)):
+  for j in range(len(b1)):
+    if a1[i]==b1[j]:
+      a1[i]='2'
+
+      b1[j]='2'
+print(a1)
+print(b1)
+cnt=0
+for i in a1:
+  if i!='2':
+    cnt=cnt+1
+print(cnt)
+index=0
+res=list("FLAMES")
+for i in range(5):
+  index=(index+ (cnt-1))%len(res)
+  res.pop(index)
+print(res[0])
+
+
+
+def runningSum(nums: list[int]) -> list[int]:
+    running_sum_array = []
+    current_sum = 0
+    for num in nums:
+        current_sum += num
+        running_sum_array.append(current_sum)
+    return running_sum_array
+
+
+
+nums1 = [1, 2, 3, 4]
+output1 = runningSum(nums1)
+print(f"Input: {nums1}, Output: {output1}")
+
+
+nums2 = [1, 1, 1, 1, 1]
+output2 = runningSum(nums2)
+print(f"Input: {nums2}, Output: {output2}")
+
+
+nums3 = [3, 1, 2, 10, 1]
+output3 = runningSum(nums3)
+print(f"Input: {nums3}, Output: {output3}")
+
+
+
+
+a=[[" " for i in range(11)] for i  in range(11)]
+
+for i in range(11):
+  for j in range(11):
+    if j==0 or j==10:
+      a[i][j]="*"
+    if i==j and i<6:
+      a[i][j]="*"
+    if i+j==10 and i<6:
+      a[i][j]="*"
+
+for row in a:
+  print("".join(row))
+
+
+
+
+ a={}
+ print(type(a))
+
+
+a=set()
+print(type(a))
+
+
+
+a={2,2,3,4,5,6,5,6}
+for i in a:
+  print("Hi")
+
+
+
+a={2,4,6,7,8,9}
+b={1,2,3,4,5,6,8,9}
+print(a.union(b))
+print(a&b)
+
+
+d={'name':'Gill','age':45,'runs':2000}
+for i in d.items():
+  print(i)
+for i in d.keys():
+  print(i)
+
+
+
+a=int(input("Ishitha Enter any num: "))
+nums=[]
+while(True):
+  if a==1:
+    break
+  elif a in nums:
+    break
+  else:
+    nums.append(a)
+    d=sum([int(i) * int(i) for i in str(a)])
+    nums.append(d)
+    a = d
+if a==1:
+  print("Round")
+else:
+  print("No")
+
+
+
+
 
 
 

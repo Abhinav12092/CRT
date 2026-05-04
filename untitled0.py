@@ -399,6 +399,308 @@ else:
 
 
 
+a=1
+for i in range(2,5):
+  a=a+i
+  for j in range(i):
+    a=a+j
+    print(str(a),end=" ")
+  print()
+print(a)
+
+
+
+
+def a1():
+  print(20+40)
+def a2(a,b):
+  print(a+b)
+def a3():
+  a=90
+  b=11
+  return a+b
+def a4(a,b):
+  return a+b
+
+a1()
+a2(10,20)
+res=a3()
+res1=a4(90,60)
+
+
+
+
+
+def calculate_square_area():
+    try:
+        side = float(input("Enter the side length of the square: "))
+        area = side * side
+        print(f"The area of the square is: {area}")
+    except ValueError:
+        print("Invalid input. Please enter a number for the side length.")
+
+def calculate_rectangle_area():
+    try:
+        length = float(input("Enter the length of the rectangle: "))
+        width = float(input("Enter the width of the rectangle: "))
+        area = length * width
+        print(f"The area of the rectangle is: {area}")
+    except ValueError:
+        print("Invalid input. Please enter numbers for length and width.")
+
+def calculate_circle_area():
+    try:
+        radius = float(input("Enter the radius of the circle: "))
+        area = math.pi * (radius ** 2)
+        print(f"The area of the circle is: {area:.2f}")
+    except ValueError:
+        print("Invalid input. Please enter a number for the radius.")
+
+def calculate_triangle_area():
+    try:
+        base = float(input("Enter the base length of the triangle: "))
+        height = float(input("Enter the height of the triangle: "))
+        area = 0.5 * base * height
+        print(f"The area of the triangle is: {area}")
+    except ValueError:
+        print("Invalid input. Please enter numbers for base and height.")
+
+while True:
+    print("\n1. Square")
+    print("2. Rectangle")
+    print("3. Circle")
+    print("4. Triangle")
+    print("5. Exit")
+
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == '1':
+        calculate_square_area()
+    elif choice == '2':
+        calculate_rectangle_area()
+    elif choice == '3':
+        calculate_circle_area()
+    elif choice == '4':
+        calculate_triangle_area()
+    elif choice == '5':
+        print("Exiting the program.")
+        break
+    else:
+        print("Invalid choice. Please enter a number between 1 and 5.")
+
+
+
+
+
+def advbatch(n):
+  for i in range(1,20):
+    if i%n==0:
+      break
+    else:
+      print("Akash")
+    print("Are you Ok ??")
+  advbatch(4)
+
+
+
+
+a=int(input("Enter any num: "))
+for i in range(5,a):
+  for j in range(4,i):
+    for k in range(3,j):
+      if(j*j + k*k == i*i and cop(i,j) and cop(i,k)):
+        print(i,j,k)
+
+
+
+
+maths=["Raj","Anu","Kiran","Bala","Pavi"]
+political=["Raj","Ken","Meera","Bala","Peter"]
+social=["Raj","Ben","Meera","Arun","Pavi"]
+
+m=set(maths)
+
+
+
+
+def calculate_climb_time(X, Y, Z):
+    current_height = 0
+    minutes = 0
+
+    while True:
+
+        minutes += 1
+        current_height += Y
+
+
+        if current_height >= X:
+            return minutes
+
+
+        minutes += 1
+        current_height -= Z
+
+
+x1, y1, z1 = 30, 10, 5
+print(f"Testcase 1: X={x1}, Y={y1}, Z={z1}")
+print(f"Output: {calculate_climb_time(x1, y1, z1)} minutes")
+
+
+x2, y2, z2 = 21, 5, 3
+print(f"\nTestcase 2: X={x2}, Y={y2}, Z={z2}")
+print(f"Output: {calculate_climb_time(x2, y2, z2)} minutes")
+
+
+
+
+
+x=30
+y=10
+z=5
+
+time=0
+ht=0
+i=1
+while(ht<x):
+  if i%2==1:
+    ht=ht+y
+    time=time+1
+  else:
+    ht=ht-z
+    time=time+1
+  i=i+1
+print(time)
+
+
+
+
+x="AAACCDDDAAD"
+res=""
+c=0
+for i in range(len(x)):
+  if i+1 < len(x) and x[i]==x[i+1]:
+    c=c+1
+  else:
+    res=res+x[i]
+    res=res+str(c)
+
+print(res)
+
+
+
+
+def naresh(a):
+ if a==1:
+   return 1
+ else:
+    return a*naresh(a-1)
+    a=6
+    x=naresh(a)
+print(x)
+
+
+
+def flower(a):
+  if a == 4:
+    return
+  print(a + 10, end=" ")
+  flower(a + 1)
+  print(a, end=" ")
+
+
+flower(1)
+
+
+
+def raju(a):
+  if a == 1:
+    return
+  a -= 1
+  raju(a)
+  print("Hi")
+  raju(a)
+
+
+raju(5)
+
+
+
+def raju(a):
+  if a == 5:
+    return 1
+  B=raju(a+1)
+  print("Hi")
+  return B+2
+
+
+res=raju(1)
+print(res)
+
+
+
+
+!pip install qrcode
+import qrcode
+qr=qrcode.QRCode()
+text="ANUSHA IS A MONKEY"
+qr.add_data(text)
+qr.make(fit=True)
+res=qr.make_image(fill_color="black",back_color="white")
+res.save("Img.png")
+print("Created")
+
+
+
+class abc:
+  num=100
+  def set_dim(self,a,b):
+    self.total=a+b
+    self.display()
+  def display(self):
+    print("Addition is",self.total)
+
+
+a=abc()
+b=abc()
+a.set_dim(20,30)
+b.set_dim(30,50)
+
+
+
+
+
+
+class ace:
+  def give_details(self,a,b,c,d,country):
+    self.total=a+b+c
+    self.name=d
+    self.country=country
+  def display(self):
+    print("1.NAME=",self.name)
+    print("2.MARK",self.total)
+    print("3.COUNTRY: ",self.country)
+
+
+class bvrit:
+  def give_details(self,a,b,c,d,country):
+    self.total=a+b+c
+    self.name=d
+    self.country=country
+  def display(self):
+    print("1.NAME=",self.name)
+    print("2.MARK",self.total)
+    print("3.COUNTRY: ",self.country)
+
+a=ace()
+a.give_details(20,30,40,"Vijay Thalapathy","India")
+a.display()
+b=bvrit()
+b.give_details(20,30,40,"Thrisha","USA")
+b.display()
+
+
+
+
 
 
 
